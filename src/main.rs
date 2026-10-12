@@ -10,10 +10,41 @@ enum Routes {
     About,
 }
 
+#[derive(Debug, Default)]
+struct RouteVisited {
+    _is_working: bool,
+    name: String,
+}
+
+trait Routing {
+    fn get_routes(&mut self) -> String;
+    fn get_routes_about(&mut self) -> String;
+}
+
+impl Routing for RouteVisited {
+    fn get_routes(&mut self) -> String {
+        format!("{}", self.name)
+    }
+
+    fn get_routes_about(&mut self) -> String {
+        format!("{}", self.name)
+    }
+}
+
 fn get_route(route: &Routes) -> String {
+    let mut routing = RouteVisited {
+        _is_working: true,
+        name: String::from("/"),
+    };
+
+    let mut about = RouteVisited {
+        _is_working: true,
+        name: String::from("/About"),
+    };
+
     match route {
-        Routes::Home => { format!("{}", "/") }
-        Routes::About => { format!("{}", "/About") }
+        Routes::Home => { routing.get_routes() }
+        Routes::About => { about.get_routes_about() }
     }
 }
 
