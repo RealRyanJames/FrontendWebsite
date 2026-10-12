@@ -1,7 +1,9 @@
 * {
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -34,6 +36,11 @@ header > div a {
 
 li {
   list-style-type: none;
+}
+
+ul {
+  display: flex;
+  padding-left: 0;
 }
 
 header li a {
@@ -88,4 +95,117 @@ div > h1 {
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 23px;
+}
+
+.box {
+  text-align: center;
+  background-color: #6d2708;
+  padding: 15px;
+  height: calc(60px * 10 / 3);
+
+  position: relative;
+  top: calc(90px * 10);
+  border: 0.5px solid #101010;
+  border-radius: 20px;
+  font-size: 23px;
+  font-weight: 100;
+  position: relative;
+  text-transform: uppercase;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.box h3 {
+  color: #b7410e;
+  font-weight: 100;
+  font-family: var(--Font);
+  text-transform: uppercase;
+  position: relative;
+  bottom: -10vh;
+  font-size: 21px;
+  margin: 0 auto;
+}
+
+div > h3 > span {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div > h1 {
+    font-size: calc(40px / 2);
+  }
+
+  main > h2 {
+    font-size: calc(30px / 2);
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div > h1 {
+    font-size: calc(40px / 2);
+  }
+
+  main > h2 {
+    font-size: calc(30px / 2);
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div > h1 {
+    font-size: calc(40px / 2);
+  }
+
+  main > h2 {
+    font-size: calc(30px / 2);
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div > h1 {
+    font-size: calc(40px / 2);
+  }
+
+  main > h2 {
+    font-size: calc(30px / 2);
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box {
+    width: calc(90px * 10 / 2);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 }
