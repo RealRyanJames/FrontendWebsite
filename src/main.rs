@@ -52,7 +52,7 @@ impl WebRoutes for RoutingMessage<String, bool, String> {
             _name: String::from(""),
         };
 
-        if route._is_loading {
+        if route._is_loading || route._name.capacity() > 1 {
             return route
         }
 
@@ -94,8 +94,6 @@ fn get_route(route: &Routes) -> RoutingMessage<&'static str, bool, &'static str>
 
 #[launch]
 fn rocket() -> _ {
-
-
     let routes_h = get_route(&Routes::Home)._name;
     let routes_a = get_route(&Routes::About)._name_of_route;
     rocket::build().mount(routes_h, FileServer::from("./static")).
