@@ -1,9 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 :root {
@@ -17,6 +15,8 @@
 
 body {
   background-image: linear-gradient(to right, #954535, #b7410e);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* --------------- Header UI  ------------------ */
@@ -29,7 +29,7 @@ header {
 
 header > div a {
   color: #101010;
-  font-family: var(--Font);
+  font-family: sans-serif;
   text-decoration: none;
   font-weight: 700;
 }
@@ -45,11 +45,10 @@ ul {
 
 header li a {
   padding: 10px;
-  margin: 0;
   margin: 20px;
   text-decoration: none;
   color: #101010;
-  font-family: var(--Font);
+  font-family: sans-serif;
 }
 
 header li a:hover {
@@ -59,7 +58,7 @@ header li a:hover {
 /* --------------- Heading 2 UI  ------------------ */
 main h2 {
   text-align: center;
-  font-family: var(--Font);
+  font-family: sans-serif;
   text-transform: uppercase;
   font-size: var(--PadX);
   position: relative;
@@ -69,7 +68,7 @@ main h2 {
 main > h2 span {
   color: #6d2708;
   font-weight: 700;
-  font-family: var(--Font);
+  font-family: sans-serif;
 
   padding: 10px;
 }
@@ -78,20 +77,19 @@ main > h2 > strong {
   color: #6d2708;
 }
 
-strong::hover {
+strong:hover {
   color: rgb(12, 43, 89);
   transition: all 0.9s ease;
 }
 
 div > h1 {
   text-decoration: none;
-  text-align: left;
-  box-shadow: 1px 1px 2px 0px #6d2708;
+  box-shadow: 1px 1px 2px 0 #6d2708;
   text-align: center;
   padding: 10px;
   position: relative;
   top: 230px;
-  font-family: var(--Font);
+  font-family: sans-serif;
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 23px;
@@ -105,11 +103,10 @@ div > h1 {
 
   position: relative;
   top: calc(90px * 10);
-  border: 0.5px solid #101010;
+  border: 1px solid #101010;
   border-radius: 20px;
   font-size: 23px;
   font-weight: 100;
-  position: relative;
   text-transform: uppercase;
   width: 90%;
   margin: 0 auto;
@@ -118,7 +115,7 @@ div > h1 {
 .box h3 {
   color: #b7410e;
   font-weight: 100;
-  font-family: var(--Font);
+  font-family: sans-serif;
   text-transform: uppercase;
   position: relative;
   bottom: -10vh;
